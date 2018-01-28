@@ -30,9 +30,9 @@ class ProfesorController extends Controller
     		//quita epsacios al inicio y final, esto es para buscar
     		//el % hace que el texto se busque en ciualquier parte de la cadena
     		$query=trim($request->get('searchText')); 
-    		$profesores=DB::table('profesor')->where('nombre','LIKE','%'.$query.'%')
+    		$profesores=DB::table('profesor')->where('NOMBRE_PRO','LIKE','%'.$query.'%')
     		//->where('telefono','=','1')
-    		->orderBy('nombre','asc')
+    		->orderBy('NOMBRE_PRO','asc')
     		->paginate(7); 
     		return view('horario.profesor.index',["profesores"=>$profesores,"searchText"=>$query]);
     	}
@@ -75,7 +75,7 @@ class ProfesorController extends Controller
     	$profesor=Profesor::findOrFail($id);
     	$profesor->nombre=$request->get('nombre');
     	$profesor->telefono=$request->get('telefono');
-    	$profesor->correo=$correo->get('correo');
+    	//$profesor->correo=$correo->get('correo');
     	$profesor->update();
     	return Redirect::to('horario/profesor');
     		

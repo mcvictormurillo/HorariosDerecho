@@ -14,7 +14,7 @@
 		<div class="table-responsive">
 			<table class="table table-striped table-bordered table-condensed table-hover">
 				<thead>
-					<th>Cedula</th>
+					
 					<th>Nombre</th>
 					<th>Telefono</th>
 					<th>Correo</th>
@@ -23,11 +23,11 @@
 				</thead>
 				@foreach ($profesores as $pro)
 					<tr>
-						<td>{{ $pro->Cedula}}</td>
-						<td>{{ $pro->Nombre}}</td>
-						<td>{{ $pro->Telefono}}</td>
-						<td>{{ $pro->Correo}}</td>
-						<td>{{ $pro->Estado}}</td>	
+						
+						<td>{{ $pro->NOMBRE_PRO}}</td>
+						<td>{{ $pro->TELEFONO_PRO}}</td>
+						<td>{{ $pro->CORREO}}</td>
+						<td>{{ $pro->ESTADO_PRO}}</td>	
 						<td>
 							<a href=""><button class="btn  btn-info"> Editar</button></a>
 
