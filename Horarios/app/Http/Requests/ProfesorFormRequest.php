@@ -2,10 +2,9 @@
 
 namespace Horarios\Http\Requests;
 
-//use Illuminate\Foundation\Http\FormRequest;
-use Horarios\Http\Requests\Request
+use Illuminate\Foundation\Http\FormRequest;
 
-class ProfesorFormRequest extends Request
+class ProfesorFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,14 +21,14 @@ class ProfesorFormRequest extends Request
      *
      * @return array
      */
-    public function rules() // creamos las reglas para el formulario
+    public function rules()
     {
-        return [ //estos son los nombres de los objestos en el formulario html a validar Y NO NECESARIAMENTE LOS CAMPOS BD
-            'cedula' => 'required'
-            'nombre' => 'required'
-            'telefono' => 'required'
-            'correo' => 'required'
-            'estado' => 'required'
+        return [
+            //miramos la base de datos para condiciones
+            'nombre'=>'required',
+            'telefono'=>'required',
+            'correo'=>'required',
+
         ];
     }
 }

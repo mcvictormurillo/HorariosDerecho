@@ -24,10 +24,10 @@
 				@foreach ($profesores as $pro)
 					<tr>
 						
-						<td>{{ $pro->NOMBRE_PRO}}</td>
-						<td>{{ $pro->TELEFONO_PRO}}</td>
-						<td>{{ $pro->CORREO}}</td>
-						<td>{{ $pro->ESTADO_PRO}}</td>	
+						<td>{{ $pro->NOMBREPROF}}</td>
+						<td>{{ $pro->TELEFONOPROF}}</td>
+						<td>{{ $pro->CORREOPROF}}</td>
+						<td>{{ $pro->ESTADOPROF}}</td>	
 						<td>
 							<a href=""><button class="btn  btn-info"> Editar</button></a>
 

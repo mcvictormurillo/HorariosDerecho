@@ -13,8 +13,9 @@ class Profesor extends Model
     protected $fillable = [
     	'nombre',
     	'telefono',
-    	'estado'
-    ]:
+    	'estado',
+        'correo'
+    ];
 
     protected $guarded=[
     ];
